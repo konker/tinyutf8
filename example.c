@@ -36,7 +36,7 @@ $   U+0024
 SP  U+0020
 */
 int main(int argc, char **argv) {
-    printf("Tinyutf8 library: %d, %s, %s\n", argc, argv[1], argv[2]);
+    printf("TinyUTF8 library\n");
 
     char bytes[] = "$, ¢, €, 𐍈";
 
