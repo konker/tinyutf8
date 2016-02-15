@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -g -fno-builtin
+CFLAGS = -Wall -g -fno-builtin -fsigned-char
 EXTRA_FLAGS = -L. -ltinyutf8
 utilObjs = tinyutf8.o
 

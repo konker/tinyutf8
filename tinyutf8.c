@@ -25,7 +25,9 @@
    https://github.com/JeffBezanson/cutef8
 */
 
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "tinyutf8.h"
 
 /* is c the start of a utf8 sequence? */
@@ -39,11 +41,14 @@ static const uint32_t TINYUTF8_OFFSETS_FROM_UTF8[6] = {
 size_t tinyutf8_strlen(const char * const bytes) {
     size_t ret = 0;
     size_t i = 0, lasti = 0;
+    size_t blen = strlen(bytes);
 
-    while (1) {
+    while (i < blen) {
         lasti = i;
-        while (bytes[i] > 0)
+        while ((signed char)bytes[i] > 0) {
             i++;
+        }
+
         ret += (i - lasti);
         if (bytes[i++] == 0) {
             break;
