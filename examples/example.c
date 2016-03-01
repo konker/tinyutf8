@@ -43,11 +43,11 @@ int main(int argc, char **argv) {
     size_t len = tinyutf8_strlen(bytes);
 
     printf("s: %s\n", bytes);
-    printf("strlen: %d\n", len);
+    printf("strlen: %ld\n", len);
 
     size_t i = 0, cnt = 0;
     while (cnt++ < len) {
-        printf("CP(%d): %02x\n", i, tinyutf8_next_codepoint(bytes, &i));
+        printf("CP(%ld): %02x\n", i, tinyutf8_next_codepoint(bytes, &i));
     }
     printf("Goodbye\n");
 
