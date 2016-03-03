@@ -15,5 +15,5 @@ else()
     add_library(tinyutf8 STATIC ${LIBSOURCES})
 endif()
 
-add_executable(example examples/example.c)
-target_link_libraries(example tinyutf8)
+add_executable(tinyutf8_example examples/tinyutf8_example.c)
+target_link_libraries(tinyutf8_example tinyutf8)
