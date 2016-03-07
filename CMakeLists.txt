@@ -9,11 +9,7 @@ include_directories(include)
 file(GLOB LIBSOURCES "src/*.c")
 file(GLOB EXAMPLESOURCES "examples/*.c")
 
-if(SHARED_LIBRARY)
-    add_library(tinyutf8 SHARED ${LIBSOURCES})
-else()
-    add_library(tinyutf8 STATIC ${LIBSOURCES})
-endif()
+add_library(tinyutf8 ${LIBSOURCES})
 
 add_executable(tinyutf8_example examples/tinyutf8_example.c)
 target_link_libraries(tinyutf8_example tinyutf8)
